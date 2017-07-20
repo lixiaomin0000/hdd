@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="wrap">
+			<h2>快速搜索消费贷款</h2>
+			<p>贷款金额：<span>不足一万可用小数表示</span></p>
+			<div class="inp">
+				<input type="text" placeholder="万元" class="inp1"/>
+				<div class="inp_sele">V
+					<ul>
+						<li>6万元</li>
+						<li>1万元</li>
+						<li>18万元</li>
+						<li>3万元</li>
+						<li>5万元</li>
+						<li>10万元</li>
+					</ul>
+				</div>
+			     </select>
+			</div>
+			<p>贷款金额：<span>不足一万可用小数表示</span></p>
+			<div class="inp">
+				<input type="text" placeholder="个月" class="inp2"/>
+				<div class="inp_sele">V
+				<ul>
+						<li>6个月</li>
+						<li>1年</li>
+						<li>18个月</li>
+						<li>3年</li>
+						<li>5年</li>
+						<li>10年</li>
+					</ul>
+				</div>
+			</div>
+			<button>搜索一下</button>
+			<p class="pp">9164656信贷产品 2000家银行 1403家小袋公司</p>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<script>
+//		$('.inp_sele').click(function(){
+//			$(this).children("ul").show().siblings().hide();
+//			$(".inp_sele ul li").click(function(){
+//				$('.inp1').val($(this).html());
+//				$('.inp_sele').click(function(){
+//					$(this).children().hide();
+//					return false;
+//				})
+//			})
+//		})
+		$(".inp_sele").click(function(){
+	    	$(this).children("ul").toggle();
+	    })
+		$("li").each(function(){
+			$(this).click(function(){
+				var a = $(this).text();
+	            $(this).parent().parent().prev().val(a);
+	            $(this).parent().toggle();
+			})
+		})
+		
+		
+	</script>
+</html>
